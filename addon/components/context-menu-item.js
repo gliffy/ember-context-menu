@@ -25,8 +25,8 @@ export default Component.extend({
     return !get(this, '_isParent') && amount > 1 && amount;
   }),
 
-  _isParent: or('item.filterConfig', 'item.subActions.length'),
-  _separatorTop: and('item.separator', 'item.separator.top'),
+  _isParent:        or('item.filterConfig', 'item.subActions.length'),
+  _separatorTop:    and('item.separator', 'item.separator.top'),
   _separatorBottom: and('item.separator', 'item.separator.bottom'),
 
   isDisabled: computed('item.filterConfig', 'item.{disabled,action}', 'itemIsDisabled', function() {
